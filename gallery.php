@@ -33,10 +33,10 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
-                            <li class="nav-item active"><a class="nav-link" href="index.php">Accueil</a></li> 
+                            <li class="nav-item"><a class="nav-link" href="index.php">Accueil</a></li> 
                             <!-- <li class="nav-item"><a class="nav-link" href="about.php">À propos</a></li> -->
                             <li class="nav-item"><a class="nav-link" href="admin/reservation.php">Hébergement</a></li>
-                            <li class="nav-item"><a class="nav-link" href="gallery.php">Galerie</a></li> 
+                            <li class="nav-item active"><a class="nav-link" href="gallery.php">Galerie</a></li> 
                             <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
                         </ul>
                     </div> 

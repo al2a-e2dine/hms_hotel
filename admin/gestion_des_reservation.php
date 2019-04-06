@@ -218,6 +218,7 @@ header('Location:confirmation_de_reservation.php?id='.$id_reservation.'&num_cham
             $q_ch="SELECT * FROM `chambres` WHERE `num_chambres`='$num_ch'";
             $r_ch=mysqli_query($dbc,$q_ch);
             while ($row_ch=mysqli_fetch_assoc($r_ch)) {
+              $prix=$row ['n_days']*$row_ch ['prix'];
           ?>
             <td><?= $row ['id_reservation'] ?></td>
             <td><?= $row ['firstname']." ".$row ['lastname'] ?></td>
@@ -229,9 +230,9 @@ header('Location:confirmation_de_reservation.php?id='.$id_reservation.'&num_cham
             <td><?= $row ['date_out'] ?></td>
             <td><?= $row ['n_days'] ?></td>
             <td><?= $row ['date_reservation'] ?></td>
-            <td><?= $row ['n_days']*$row_ch ['prix'] ?> DA</td>
+            <td><?= $prix ?> DA</td>
             <td>
-              <a href="update_reservation.php?id=<?= $row ['id_reservation'] ?>" type="button" class="btn btn-primary">print</a>
+              <a href="print.php?id=<?= $row ['id_reservation'] ?>&p=<?= $prix ?>" type="button" class="btn btn-primary">print</a>
             </td>
             <td>
             <?php
